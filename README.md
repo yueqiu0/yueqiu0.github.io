@@ -6,10 +6,11 @@ A lightweight, responsive academic homepage for [Yue Qiu](https://yueqiu0.github
 
 - `index.html`: biography, MS/PhD applicant notice, publications, experience, education, and honors.
 - `style.css`: typography, spacing, responsive layouts, and print styles.
+- `contacts.js`: contact icon selection, inline information disclosure, and keyboard dismissal.
 - `assets/portrait.png`: the supplied portrait.
 - `assets/Yue_Qiu_CV.pdf`: downloadable public CV.
 
-The site uses plain HTML and CSS. Publication summaries use native HTML disclosure controls and work without JavaScript.
+The site uses plain HTML, CSS, and a small JavaScript file for the contact icons. Publication summaries use native HTML disclosure controls and work without JavaScript.
 
 ## Local preview
 

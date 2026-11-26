@@ -33,11 +33,21 @@ a:focus-visible, summary:focus-visible { outline: 2px solid var(--blue); outline
 .profile-name { font-size: 23px; font-weight: 700; margin: 15px 0 1px; line-height: 1.35; }
 .profile-role { margin: 5px 0; font-size: 15px; }
 .profile-university { margin: 0; font-size: 15px; line-height: 1.5; }
-.profile-links { list-style: none; padding: 0; margin: 20px 0 0; font-size: 14px; }
-.profile-links li { display: flex; align-items: baseline; gap: 8px; padding: 4px 0; }
-.profile-links a { color: #444b50; text-decoration: none; overflow-wrap: anywhere; }
-.profile-links a:hover { color: var(--blue); text-decoration: underline; }
-.contact-icon { display: inline-block; width: 17px; flex-shrink: 0; color: #62696e; text-align: center; }
+.profile-location { display: flex; gap: 9px; align-items: center; margin: 18px 0 7px; color: var(--muted); font-size: 14px; }
+.profile-location > span { width: 28px; text-align: center; }
+.contact-methods { list-style: none; padding: 0; margin: 0; }
+.contact-method { display: grid; grid-template-columns: 28px minmax(0, 1fr); align-items: center; column-gap: 9px; min-height: 33px; }
+.contact-toggle { display: grid; place-items: center; width: 28px; height: 30px; padding: 4px; border: 0; border-radius: 3px; color: #8a9299; background: transparent; cursor: pointer; transition: color 120ms ease; }
+.contact-toggle svg { display: block; width: 20px; height: 20px; }
+.contact-toggle:hover { color: #62696e; }
+.contact-toggle[aria-expanded="true"] { color: #111; }
+.contact-toggle:focus-visible { outline: 2px solid var(--blue); outline-offset: 2px; }
+.contact-label { color: var(--muted); font-size: 14px; }
+.contact-info { min-width: 0; color: var(--ink); font-size: 14px; line-height: 1.5; overflow-wrap: anywhere; }
+.contact-label[hidden], .contact-info[hidden] { display: none; }
+.contact-info a { color: inherit; text-decoration: none; }
+.contact-info a:hover { color: var(--blue); text-decoration: underline; }
+.contact-fallback { font-size: 14px; }
 main { min-width: 0; padding-bottom: 28px; }
 section { scroll-margin-top: 90px; margin-bottom: 34px; }
 h1 { margin: -7px 0 1px; font-size: 32px; line-height: 1.35; letter-spacing: -.5px; font-weight: 700; }
@@ -95,10 +105,11 @@ details p { margin: 0; color: #596067; line-height: 1.65; }
   .portrait { width: 112px; height: 112px; flex-shrink: 0; padding: 3px; }
   .profile-name { font-size: 21px; margin: 0 0 2px; }
   .profile-role, .profile-university { font-size: 14px; }
-  .profile-links { display: flex; flex-wrap: wrap; gap: 1px 14px; margin-top: 9px; }
-  .profile-links li { padding: 1px 0; font-size: 14px; }
-  .profile-links li:first-child { display: none; }
-  .profile-links .contact-icon { display: none; }
+  .profile-text { flex: 1; min-width: 0; }
+  .profile-location { display: none; }
+  .contact-methods { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1px 8px; margin-top: 9px; }
+  .contact-method { column-gap: 6px; min-height: 32px; }
+  .contact-method.is-active { grid-column: 1 / -1; }
   h1 { font-size: 30px; margin: 0; }
   h2 { font-size: 22px; }
   section { scroll-margin-top: 115px; margin-bottom: 29px; }
@@ -116,7 +127,7 @@ details p { margin: 0; color: #596067; line-height: 1.65; }
   .portrait { width: 95px; height: 95px; }
   .profile-university br { display: none; }
 }
-@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } .contact-toggle { transition: none; } }
 @media print {
   body { font-size: 10pt; color: #000; }
   .masthead, .skip-link, .profile, .page-footer { display: none; }
