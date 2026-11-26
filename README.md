@@ -4,7 +4,7 @@ A lightweight, responsive academic homepage for [Yue Qiu](https://yueqiu0.github
 
 ## Edit the site
 
-- `index.html`: biography, MS/PhD applicant notice, publications, experience, education, and honors.
+- `index.html`: biography, MS/PhD applicant notice, publications, education, and honors.
 - `style.css`: typography, spacing, responsive layouts, and print styles.
 - `contacts.js`: contact icon selection, inline information disclosure, and keyboard dismissal.
 - `assets/portrait.png`: the supplied portrait.
