@@ -109,7 +109,6 @@ details p { margin: 0; color: #596067; line-height: 1.65; }
   .profile-location { display: none; }
   .contact-methods { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1px 8px; margin-top: 9px; }
   .contact-method { column-gap: 6px; min-height: 32px; }
-  .contact-method.is-active { grid-column: 1 / -1; }
   h1 { font-size: 30px; margin: 0; }
   h2 { font-size: 22px; }
   section { scroll-margin-top: 115px; margin-bottom: 29px; }
