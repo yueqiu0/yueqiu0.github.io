@@ -1,0 +1,134 @@
+/* Academic homepage: restrained typography and a responsive profile sidebar. */
+:root {
+  --ink: #3e4144;
+  --muted: #62696e;
+  --blue: #24679a;
+  --rule: #e7e9eb;
+  --notice: #ad342b;
+  --header-height: 66px;
+}
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; scroll-padding-top: 90px; }
+body {
+  margin: 0;
+  color: var(--ink);
+  background: #fff;
+  font-family: "Lato", "Segoe UI", Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
+}
+a { color: var(--blue); text-decoration: underline; text-underline-offset: 2px; }
+a:hover { color: #164a72; }
+a:focus-visible, summary:focus-visible { outline: 2px solid var(--blue); outline-offset: 4px; border-radius: 2px; }
+.skip-link { position: fixed; left: 16px; top: -80px; z-index: 20; padding: 8px 16px; background: #fff; border: 2px solid var(--blue); }
+.skip-link:focus { top: 10px; }
+.masthead { position: sticky; top: 0; z-index: 10; background: rgba(255,255,255,.98); border-bottom: 1px solid var(--rule); }
+.navigation { max-width: 1230px; margin: 0 auto; display: flex; flex-wrap: wrap; align-items: center; gap: 0 29px; min-height: var(--header-height); padding: 8px 28px; }
+.navigation a { color: #596067; padding: 10px 0; font-size: 16px; text-decoration: none; white-space: nowrap; }
+.navigation a:hover, .navigation a:focus-visible { color: var(--blue); text-decoration: underline; }
+.page-layout { width: min(1230px, 100%); display: grid; grid-template-columns: 225px minmax(0,1fr); gap: 51px; margin: 38px auto 0; padding: 0 28px; }
+.profile { position: sticky; top: 99px; align-self: start; }
+.portrait { display: block; width: 190px; height: 190px; border-radius: 50%; object-fit: cover; object-position: 44% 18%; border: 1px solid #e8e8e8; padding: 4px; background: #fff; }
+.profile-name { font-size: 23px; font-weight: 700; margin: 15px 0 1px; line-height: 1.35; }
+.profile-role { margin: 5px 0; font-size: 15px; }
+.profile-university { margin: 0; font-size: 15px; line-height: 1.5; }
+.profile-links { list-style: none; padding: 0; margin: 20px 0 0; font-size: 14px; }
+.profile-links li { display: flex; align-items: baseline; gap: 8px; padding: 4px 0; }
+.profile-links a { color: #444b50; text-decoration: none; overflow-wrap: anywhere; }
+.profile-links a:hover { color: var(--blue); text-decoration: underline; }
+.contact-icon { display: inline-block; width: 17px; flex-shrink: 0; color: #62696e; text-align: center; }
+main { min-width: 0; padding-bottom: 28px; }
+section { scroll-margin-top: 90px; margin-bottom: 34px; }
+h1 { margin: -7px 0 1px; font-size: 32px; line-height: 1.35; letter-spacing: -.5px; font-weight: 700; }
+h2 { margin: 0 0 15px; padding-bottom: 6px; font-size: 23px; line-height: 1.4; border-bottom: 1px solid var(--rule); font-weight: 700; letter-spacing: -.2px; }
+h3 { margin: 0; font-size: 16px; font-weight: 700; line-height: 1.55; }
+p { margin: 10px 0; }
+.intro-affiliation { margin: 1px 0 20px; color: var(--muted); font-size: 16px; }
+.applicant-notice { color: var(--notice); margin: 0 0 20px; line-height: 1.65; }
+.applicant-notice a { color: inherit; }
+.quick-links { margin-top: 16px; }
+.research-list { margin: 0; padding-left: 21px; }
+.research-list li { margin: 7px 0; padding-left: 1px; }
+.section-note { color: var(--muted); font-size: 14px; margin: -4px 0 19px; }
+sup { font-size: .75em; line-height: 0; vertical-align: super; }
+.publication-list { margin: 0; padding: 0; list-style: none; }
+.publication { margin: 0 0 24px; }
+.publication h3 { font-size: 16px; line-height: 1.6; }
+.paper-links { font-weight: 400; font-size: 15px; }
+.paper-links a { white-space: nowrap; }
+.authors { font-size: 14px; line-height: 1.65; margin: 5px 0 2px; }
+.my-name { text-decoration: underline; text-underline-offset: 2px; }
+.venue { margin: 2px 0 5px; font-size: 15px; font-style: italic; }
+.distinction { color: var(--notice); font-style: normal; }
+details { font-size: 14px; }
+summary { display: list-item; width: fit-content; cursor: pointer; color: var(--blue); text-underline-offset: 2px; line-height: 1.6; padding: 2px 0; }
+summary:hover { text-decoration: underline; }
+details[open] summary { margin-bottom: 4px; }
+details p { margin: 0; color: #596067; line-height: 1.65; }
+.entry-heading { display: flex; align-items: baseline; justify-content: space-between; gap: 5px 16px; }
+.entry-heading h3 { flex: 1; }
+.date { color: var(--muted); white-space: nowrap; font-size: 14px; margin: 0; font-weight: 400; }
+.entry-affiliation { font-size: 14px; line-height: 1.65; margin: 4px 0 6px; }
+.experience-item { margin: 0 0 23px; }
+.experience-item ul { margin: 3px 0 0; padding-left: 20px; font-size: 15px; }
+.experience-item li { margin: 4px 0; }
+.education-item { margin-bottom: 18px; }
+.education-item > p { margin: 3px 0 0; font-size: 15px; }
+.honor-entry > p { margin: 0; }
+.honor-entry > p:first-child { font-size: 15px; }
+.page-footer { margin-top: 48px; padding-top: 17px; border-top: 1px solid var(--rule); font-size: 14px; color: var(--muted); }
+.page-footer p { margin: 4px 0; }
+@media (max-width: 1040px) {
+  .page-layout { gap: 34px; grid-template-columns: 200px minmax(0,1fr); }
+  .portrait { width: 175px; height: 175px; }
+  .entry-heading { flex-wrap: wrap; }
+  .entry-heading h3 { flex-basis: 100%; }
+}
+@media (max-width: 760px) {
+  :root { --header-height: 62px; }
+  html { scroll-padding-top: 115px; }
+  .navigation { padding: 6px 20px; gap: 0 22px; }
+  .navigation a { font-size: 14px; padding: 7px 0; }
+  .page-layout { display: block; margin-top: 26px; padding: 0 20px; }
+  .profile { position: static; display: flex; align-items: flex-start; gap: 20px; margin-bottom: 28px; }
+  .portrait { width: 112px; height: 112px; flex-shrink: 0; padding: 3px; }
+  .profile-name { font-size: 21px; margin: 0 0 2px; }
+  .profile-role, .profile-university { font-size: 14px; }
+  .profile-links { display: flex; flex-wrap: wrap; gap: 1px 14px; margin-top: 9px; }
+  .profile-links li { padding: 1px 0; font-size: 14px; }
+  .profile-links li:first-child { display: none; }
+  .profile-links .contact-icon { display: none; }
+  h1 { font-size: 30px; margin: 0; }
+  h2 { font-size: 22px; }
+  section { scroll-margin-top: 115px; margin-bottom: 29px; }
+  .intro-affiliation { font-size: 15px; margin-bottom: 17px; }
+  .applicant-notice { font-size: 15px; }
+  .entry-heading { gap: 3px; }
+  .entry-heading h3 { flex-basis: 100%; }
+  .honor-entry { display: block; }
+  .honor-entry .date { margin-top: 3px; }
+}
+@media (max-width: 410px) {
+  .navigation { column-gap: 18px; }
+  .page-layout { padding: 0 17px; }
+  .profile { gap: 15px; }
+  .portrait { width: 95px; height: 95px; }
+  .profile-university br { display: none; }
+}
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+@media print {
+  body { font-size: 10pt; color: #000; }
+  .masthead, .skip-link, .profile, .page-footer { display: none; }
+  .page-layout { display: block; width: 100%; margin: 0; padding: 0; }
+  main { padding: 0; }
+  section { margin-bottom: 16px; }
+  h1 { font-size: 23pt; }
+  h2 { font-size: 15pt; }
+  h3, .publication h3 { font-size: 11pt; }
+  .publication, .experience-item, .education-item { break-inside: avoid; }
+  .entry-heading { flex-wrap: nowrap; }
+  .entry-heading h3 { flex-basis: auto; }
+  details { display: none; }
+  a { color: #000; }
+}
