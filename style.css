@@ -70,7 +70,7 @@ sup { font-size: .75em; line-height: 0; vertical-align: super; }
 .authors { font-size: 14px; line-height: 1.65; margin: 5px 0 2px; }
 .my-name { text-decoration: underline; text-underline-offset: 2px; }
 .venue { margin: 2px 0 5px; font-size: 15px; font-style: italic; }
-.distinction { color: var(--notice); font-style: normal; }
+.distinction { color: var(--notice); font-style: italic; }
 details { font-size: 14px; }
 summary { display: list-item; width: fit-content; cursor: pointer; color: var(--blue); text-underline-offset: 2px; line-height: 1.6; padding: 2px 0; }
 summary:hover { text-decoration: underline; }
