@@ -1,14 +1,15 @@
 # Yue Qiu — Academic Homepage
 
-A lightweight, responsive academic homepage for [Yue Qiu](https://yueqiu0.github.io/), hosted on GitHub Pages.
+A responsive academic homepage for [Yue Qiu](https://yueqiu0.github.io/), hosted on GitHub Pages, with a centered profile and a single column of content sections.
 
 ## Edit the site
 
 - `index.html`: biography, MS/PhD applicant notice, publications, education, and honors.
-- `style.css`: typography, spacing, responsive layouts, and print styles.
-- `contacts.js`: contact icon selection, inline information disclosure, and keyboard dismissal.
+- `style.css`: Georgia headings, responsive section layouts, and print styles.
+- `contacts.js`: contact icon selection, information popovers, and keyboard dismissal.
 - `assets/portrait.png`: the supplied portrait.
 - `assets/Yue_Qiu_CV.pdf`: downloadable public CV.
+- `assets/fonts/name-kai.woff2`: a four-character Kai-style subset for the Chinese name, derived from LXGW WenKai Mono and distributed with its SIL Open Font License.
 
 The site uses plain HTML, CSS, and a small JavaScript file for the contact icons. Publication summaries use native HTML disclosure controls and work without JavaScript.
 
@@ -26,4 +27,6 @@ Use the repository `yueqiu0/yueqiu0.github.io`. In **Settings → Pages**, choos
 
 ## References
 
-The presentation is inspired by [Gan Luo’s academic homepage](https://luoxiaogan.github.io/GanLuo.github.io/). The applicant introduction also takes inspiration from [Yuyang Peng’s homepage](https://p-y-y.github.io/). The compact About Me section follows the introduction and research-interest structure of [Valerie Chen’s homepage](https://valeriechen.github.io/). All biography, publication, and experience information belongs to Yue Qiu.
+The layout follows the centered profile, serif headings, and light section panels of [Valerie Chen’s homepage](https://valeriechen.github.io/). All biography and publication information belongs to Yue Qiu.
+
+The Chinese-name font is subsetted from [LXGW WenKai](https://github.com/lxgw/LxgwWenKai). Its copyright and license are included in `assets/fonts/OFL-LXGW-WenKai.txt`.
