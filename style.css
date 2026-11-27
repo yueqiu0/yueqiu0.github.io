@@ -63,14 +63,15 @@ h3 { margin: 0; font-size: 17px; line-height: 1.45; }
 p { margin: 0 0 12px; }
 
 .profile {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 18px;
-  margin: 32px auto 36px;
-  text-align: center;
+  display: grid;
+  grid-template-columns: 150px minmax(0, 1fr) 250px;
+  grid-template-areas: "portrait name affiliation" "portrait contacts affiliation";
+  align-items: start;
+  gap: 14px 28px;
+  margin: 32px auto 0;
 }
 .portrait {
+  grid-area: portrait;
   display: block;
   width: 150px;
   height: 150px;
@@ -80,11 +81,10 @@ p { margin: 0 0 12px; }
   border-radius: 50%;
   box-shadow: var(--shadow);
 }
-.profile-text { min-width: 0; max-width: 100%; }
-.profile-name { margin-bottom: 8px; }
-.name-en, .name-zh { display: inline-block; }
+.profile-name { grid-area: name; margin: 0; min-width: 0; }
+.name-en, .name-zh { display: block; }
 .name-zh {
-  margin-left: .08em;
+  margin-top: 8px;
   font-family: "YueQiu Name Kai", "Kaiti SC", STKaiti, KaiTi, serif;
   font-size: .9em;
   font-weight: 400;
@@ -92,14 +92,29 @@ p { margin: 0 0 12px; }
   white-space: nowrap;
 }
 .profile-role, .profile-university { margin: 0; color: var(--muted); font-size: 14px; line-height: 1.5; }
+.profile-affiliation { grid-area: affiliation; text-align: right; }
+.profile-role { margin-bottom: 12px; font-weight: 600; }
+
+.section-navigation {
+  display: flex;
+  justify-content: space-around;
+  gap: 12px;
+  margin: 24px 0 28px;
+  padding: 13px 0;
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+}
+.section-navigation a { color: var(--ink); font-weight: 500; }
+.section-navigation a:hover { color: var(--blue); }
 
 .contact-methods {
+  grid-area: contacts;
   position: relative;
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   gap: 10px;
   width: max-content;
-  margin: 14px auto 0;
+  margin: 0;
   padding: 0;
   list-style: none;
 }
@@ -139,8 +154,8 @@ p { margin: 0 0 12px; }
   transform: translateY(-50%);
 }
 .contact-info.is-below { top: calc(100% + 10px); left: 50%; transform: translateX(-50%); }
-.profile.has-below-contact { margin-bottom: 80px; }
-.contact-fallback { margin-top: 14px; font-size: 14px; }
+.profile.has-below-contact { margin-bottom: 56px; }
+.contact-fallback { grid-column: 2 / -1; margin-top: 14px; font-size: 14px; }
 
 main { min-width: 0; }
 main > section {
@@ -195,9 +210,29 @@ details p { margin: 0; color: #4b5563; line-height: 1.55; }
 .page-footer { margin-top: 34px; padding: 22px 0 30px; border-top: 1px solid var(--border); color: var(--muted); font-size: 14px; text-align: center; }
 .page-footer p { margin: 3px 0; }
 
+@media (min-width: 601px) and (max-width: 900px) {
+  .profile { grid-template-columns: 120px minmax(0, 1fr) 200px; column-gap: 20px; }
+  .portrait { width: 120px; height: 120px; }
+  .profile-name { font-size: 28px; }
+  .contact-methods { gap: 6px; }
+}
+@media (max-width: 600px) {
+  .profile {
+    grid-template-columns: 1fr;
+    grid-template-areas: "portrait" "name" "affiliation" "contacts";
+    justify-items: center;
+    gap: 16px;
+    text-align: center;
+  }
+  .profile-affiliation { text-align: center; }
+  .profile-role { margin-bottom: 3px; }
+  .name-zh { margin-top: 3px; }
+  .contact-fallback { grid-column: 1; }
+}
 @media (max-width: 600px) {
   body { padding: 0 16px; }
-  .profile { margin-top: 28px; margin-bottom: 30px; }
+  .profile { margin-top: 28px; }
+  .section-navigation { gap: 8px; font-size: 14px; }
   main > section { padding: 18px; margin-bottom: 22px; }
   h2 { font-size: 23px; }
   .applicant-notice { padding: 11px 12px; }
@@ -209,8 +244,8 @@ details p { margin: 0; color: #4b5563; line-height: 1.55; }
 }
 @media print {
   body { max-width: none; padding: 0; background: white; color: black; font-size: 10pt; }
-  .skip-link, .contact-methods, .contact-fallback, .page-footer { display: none; }
-  .profile { margin: 0 0 20px; gap: 10px; }
+  .skip-link, .contact-methods, .contact-fallback, .section-navigation, .page-footer { display: none; }
+  .profile { display: flex; align-items: center; margin: 0 0 20px; gap: 24px; }
   .portrait { width: 90px; height: 90px; }
   main > section { padding: 0; border: 0; box-shadow: none; margin-bottom: 20px; }
   h2 { font-size: 15pt; }

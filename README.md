@@ -1,6 +1,6 @@
 # Yue Qiu — Academic Homepage
 
-A responsive academic homepage for [Yue Qiu](https://yueqiu0.github.io/), hosted on GitHub Pages, with a centered profile and a single column of content sections.
+A responsive academic homepage for [Yue Qiu](https://yueqiu0.github.io/), hosted on GitHub Pages, with a three-column profile header and a single column of content sections.
 
 ## Edit the site
 
@@ -27,6 +27,6 @@ Use the repository `yueqiu0/yueqiu0.github.io`. In **Settings → Pages**, choos
 
 ## References
 
-The layout follows the centered profile, serif headings, and light section panels of [Valerie Chen’s homepage](https://valeriechen.github.io/). All biography and publication information belongs to Yue Qiu.
+The content sections follow the serif headings and light panels of [Valerie Chen’s homepage](https://valeriechen.github.io/). The profile header follows the supplied horizontal reference: portrait on the left, names and contact icons in the middle, affiliation on the right, and section navigation below. All biography and publication information belongs to Yue Qiu.
 
 The Chinese-name font is subsetted from [LXGW WenKai](https://github.com/lxgw/LxgwWenKai). Its copyright and license are included in `assets/fonts/OFL-LXGW-WenKai.txt`.
