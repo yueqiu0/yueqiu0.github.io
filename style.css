@@ -64,7 +64,7 @@ p { margin: 0 0 12px; }
 
 .profile {
   display: grid;
-  grid-template-columns: 150px minmax(0, 1fr) 250px;
+  grid-template-columns: 180px minmax(0, 1fr) 250px;
   grid-template-areas: "portrait name affiliation" "portrait contacts affiliation";
   align-items: start;
   gap: 14px 28px;
@@ -73,15 +73,15 @@ p { margin: 0 0 12px; }
 .portrait {
   grid-area: portrait;
   display: block;
-  width: 150px;
-  height: 150px;
+  width: 180px;
+  height: 180px;
   object-fit: cover;
   object-position: 44% 18%;
   border: 4px solid white;
   border-radius: 50%;
   box-shadow: var(--shadow);
 }
-.profile-name { grid-area: name; margin: 0; min-width: 0; }
+.profile-name { grid-area: name; align-self: first baseline; justify-self: start; width: max-content; max-width: 100%; margin: 0; min-width: 0; }
 .name-en, .name-zh { display: block; }
 .name-zh {
   margin-top: 8px;
@@ -89,14 +89,16 @@ p { margin: 0 0 12px; }
   font-size: .9em;
   font-weight: 400;
   letter-spacing: 0;
+  text-align: right;
   white-space: nowrap;
 }
-.profile-role, .profile-university { margin: 0; color: var(--muted); font-size: 14px; line-height: 1.5; }
-.profile-affiliation { grid-area: affiliation; text-align: right; }
-.profile-role { margin-bottom: 12px; font-weight: 600; }
+.profile-role, .profile-university { margin: 0; color: var(--muted); font-size: 16px; line-height: 1.5; }
+.profile-affiliation { grid-area: affiliation; align-self: first baseline; text-align: right; }
+.profile-role { margin-bottom: 12px; font-size: 18px; font-weight: 700; }
 
 .section-navigation {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-around;
   gap: 12px;
   margin: 24px 0 28px;
@@ -210,13 +212,13 @@ details p { margin: 0; color: #4b5563; line-height: 1.55; }
 .page-footer { margin-top: 34px; padding: 22px 0 30px; border-top: 1px solid var(--border); color: var(--muted); font-size: 14px; text-align: center; }
 .page-footer p { margin: 3px 0; }
 
-@media (min-width: 601px) and (max-width: 900px) {
-  .profile { grid-template-columns: 120px minmax(0, 1fr) 200px; column-gap: 20px; }
-  .portrait { width: 120px; height: 120px; }
+@media (max-width: 900px) {
+  .profile { grid-template-columns: 150px minmax(0, 1fr) 210px; column-gap: 20px; }
+  .portrait { width: 150px; height: 150px; }
   .profile-name { font-size: 28px; }
   .contact-methods { gap: 6px; }
 }
-@media (max-width: 600px) {
+@media (max-width: 650px) {
   .profile {
     grid-template-columns: 1fr;
     grid-template-areas: "portrait" "name" "affiliation" "contacts";
@@ -224,7 +226,10 @@ details p { margin: 0; color: #4b5563; line-height: 1.55; }
     gap: 16px;
     text-align: center;
   }
-  .profile-affiliation { text-align: center; }
+  .profile-name { align-self: start; justify-self: center; }
+  .profile-affiliation { align-self: start; text-align: center; }
+  .portrait { width: 180px; height: 180px; }
+  .contact-methods { gap: 10px; }
   .profile-role { margin-bottom: 3px; }
   .name-zh { margin-top: 3px; }
   .contact-fallback { grid-column: 1; }
