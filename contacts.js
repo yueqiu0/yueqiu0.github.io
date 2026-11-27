@@ -1,5 +1,7 @@
 (() => {
-  const methods = [...document.querySelectorAll('.contact-method')];
+  const methods = [...document.querySelectorAll('.contact-method')].filter(
+    (method) => method.querySelector('.contact-info')
+  );
   const profile = document.querySelector('.profile');
 
   function setExpanded(method, expanded) {
@@ -38,7 +40,7 @@
   });
 
   document.addEventListener('click', (event) => {
-    if (!event.target.closest('.contact-methods')) {
+    if (!event.target.closest('.contact-methods') || event.target.closest('.contact-link')) {
       methods.forEach((method) => setExpanded(method, false));
       positionOpenDetails();
     }

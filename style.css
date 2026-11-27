@@ -136,7 +136,7 @@ p { margin: 0 0 12px; }
   transition: color 120ms ease;
 }
 .contact-toggle svg { display: block; width: 20px; height: 20px; }
-.contact-toggle:hover, .contact-toggle[aria-expanded="true"] { color: #111; }
+.contact-toggle:hover, .contact-toggle:focus-visible, .contact-toggle:active, .contact-toggle[aria-expanded="true"] { color: #111; }
 .contact-info {
   position: absolute;
   z-index: 5;

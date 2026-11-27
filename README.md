@@ -11,7 +11,7 @@ A responsive academic homepage for [Yue Qiu](https://yueqiu0.github.io/), hosted
 - `assets/Yue_Qiu_CV.pdf`: downloadable public CV.
 - `assets/fonts/name-kai.woff2`: a four-character Kai-style subset for the Chinese name, derived from LXGW WenKai Mono and distributed with its SIL Open Font License.
 
-The site uses plain HTML, CSS, and a small JavaScript file for the contact icons. Publication summaries use native HTML disclosure controls and work without JavaScript.
+The site uses plain HTML and CSS. Email, LinkedIn, and GitHub icons link directly to their destinations; a small JavaScript file toggles the WeChat, QQ, and phone details. Publication summaries use native HTML disclosure controls and work without JavaScript.
 
 ## Local preview
 
