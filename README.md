@@ -26,4 +26,4 @@ Use the repository `yueqiu0/yueqiu0.github.io`. In **Settings → Pages**, choos
 
 ## References
 
-The presentation is inspired by [Gan Luo’s academic homepage](https://luoxiaogan.github.io/GanLuo.github.io/). The applicant introduction also takes inspiration from [Yuyang Peng’s homepage](https://p-y-y.github.io/). All biography, publication, and experience information belongs to Yue Qiu.
+The presentation is inspired by [Gan Luo’s academic homepage](https://luoxiaogan.github.io/GanLuo.github.io/). The applicant introduction also takes inspiration from [Yuyang Peng’s homepage](https://p-y-y.github.io/). The compact About Me section follows the introduction and research-interest structure of [Valerie Chen’s homepage](https://valeriechen.github.io/). All biography, publication, and experience information belongs to Yue Qiu.
