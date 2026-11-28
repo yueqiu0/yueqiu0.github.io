@@ -7,7 +7,7 @@ A responsive academic homepage for [Yue Qiu](https://yueqiu0.github.io/), hosted
 - `index.html`: biography, MS/PhD applicant notice, publications, education, and honors.
 - `style.css`: Georgia headings, responsive section layouts, and print styles.
 - `contacts.js`: contact icon selection, information popovers, and keyboard dismissal.
-- `assets/portrait.png`: the supplied portrait.
+- `assets/portrait-2026.jpg`: the supplied portrait; its circular crop is set in `style.css`.
 - `assets/Yue_Qiu_CV.pdf`: downloadable public CV.
 - `assets/fonts/name-kai.woff2`: a four-character Kai-style subset for the Chinese name, derived from LXGW WenKai Mono and distributed with its SIL Open Font License.
 
